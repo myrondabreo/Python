@@ -1,1 +1,1 @@
-Learning  Python daily
+Learning Python
