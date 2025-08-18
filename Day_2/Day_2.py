@@ -4,10 +4,13 @@ while True:
     num=int(input("Enter Number:"))
     if num==0:
         print(num)
+        break
     elif num<0:
         print("Negative")
+        break
     elif num>0:
         print("Positive")
+        break
 
 # OR Better version
 
