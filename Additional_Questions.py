@@ -215,6 +215,43 @@
 #8. Second Largest and Second Smallest
 # Find the 2nd largest and 2nd smallest number in a list without using max() or min().
 
+# n=list(map(int,input("Enter Value").split(" ")))
+# n.sort()
+# #Fails for dupes
+# print(n[-2])
+# print(n[1])
+
+# #Works for dupes
+# sortedn=list(set(n))
+# print(sortedn[-2])
+# print(sortedn[1])
+
+#OR
+
+# n=list(map(int,input("Enter Value").split(" ")))
+# # float('inf') → Positive infinity (a number larger than any real number).
+# # float('-inf') → Negative infinity (a number smaller than any real number).
+# largest=float('-inf')
+# smallest=float('inf')
+
+# for number in n:
+#     if largest<number:
+#         largest=number
+#     if smallest>number:
+#         smallest=number
+# print(largest)
+# print(smallest)
+
+# second_largest=float('-inf')
+# second_smallest=float('inf')
+# for number in n:
+#     if largest>number>second_largest:
+#         second_largest=number
+#     if smallest<number<second_smallest:
+#         second_smallest=number
+# print(second_largest)
+# print(second_smallest)
+
 # 9. Remove Duplicates
 # Take a list of numbers and create a new list without duplicates (without using set()).
 
@@ -227,8 +264,68 @@
 # 12. Find Missing Number
 # If you have a list of numbers from 1 to n but one number is missing, find the missing number.
 
+
+
 # 13. Rotate a List
 # Rotate the elements of a list left by 1 position (e.g. [1,2,3,4] → [2,3,4,1]).
 
+# n=list(map(int,input("Enter Value1:").split(" ")))
+
+# # first=[n[0]]
+# # n.remove(n[0])
+# # print(n)
+# # counted=[]
+
+# # for number in n:
+# #     counted.append(number)
+
+# # counted=counted+first
+# # print(counted)
+
+#OR
+
+# # lenn=len(n)
+# # counted=[]
+# # for i in range(1,lenn):
+# #     counted.append(n[i])
+# # print(counted+[n[0]])
+
+
 # 14. Find Common Elements
 # Given two lists, find elements that are present in both.
+
+
+# n1=list(map(int,input("Enter Value1:").split(" ")))
+# n2=list(map(int,input("Enter Value2:").split(" ")))
+# counted=[]
+
+# for number1 in n1:
+#     for number2 in n2:
+#         if number1==number2:
+#             counted.append(number1)
+#         else:
+#             continue
+
+# counted_set=set(counted)
+# lst=list(sorted(counted_set))
+# print(lst)
+
+#OR
+
+# n1=list(map(int,input("Enter Value1:").split(" ")))
+# n2=list(map(int,input("Enter Value2:").split(" ")))
+# counted=[]
+
+# for number in n1:
+#     if number in n2 and number not in counted:
+#         counted.append(number)
+
+# print(counted)
+
+#OR
+
+# n1=list(map(int,input("Enter Value1:").split(" ")))
+# n2=list(map(int,input("Enter Value2:").split(" ")))
+
+# common=sorted(list(set(n1) & set (n2)))
+# print(common)
