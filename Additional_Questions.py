@@ -255,18 +255,112 @@
 # 9. Remove Duplicates
 # Take a list of numbers and create a new list without duplicates (without using set()).
 
-# 10. Reverse a List Manually
+# n=list(map(int,input("Enter  Numbers:").split(" ")))
+# nodupes=[]
+
+# for number in n:
+#     if number not in nodupes:
+#         nodupes.append(number)
+# print(nodupes)
+    
+
+# 10. remove duplicates but keep the last occurrence
+
+# n=list(map(int,input("Enter Numbers:").split(" ")))
+# n.reverse()
+# nodupes=[]
+
+# for number in n:
+#     if number not in nodupes:
+#         nodupes.append(number)
+# nodupes.reverse()
+# print(nodupes)
+
+#OR Instead of reversing n use reversed(n)
+
+# n=list(map(int,input("Enter Numbers:").split(" ")))
+# nodupes=[]
+
+# for number in reversed(n):
+#     if number not in nodupes:
+#         nodupes.append(number)
+# nodupes.reverse()
+# print(nodupes)
+
+# 11.  Reverse a List Manually
 # Write a program to reverse a list using a loop (don’t use reverse()).
 
-# 11. Sum of Even and Odd Numbers Separately
+# n=list(map(int,input("Enter Numbers").split(" ")))
+# store=[]
+
+# for number in reversed(n):
+#     store.append(number)
+
+# print(store)
+
+#OR doesnt work for double digit
+
+# store=""
+# for number in n:
+#     store=str(number)+store
+
+# print(list(map(int,store)))
+
+#OR
+
+# n=list(map(int,input("Enter Value").split()))
+
+# rev_list=[]
+
+# for number in n:
+    #inserts each number at index 0
+#     rev_list.insert(0,number)
+# print(rev_list)
+
+
+# 12.  Sum of Even and Odd Numbers Separately
 # From a list of integers, calculate the sum of even numbers and odd numbers.
 
-# 12. Find Missing Number
+# n=list(map(int,input("Enter Numbers:").split()))
+# even=0
+# odd=0
+
+# for number in n:
+#     if number%2==0:
+#        #even=number+even
+#        even+=number
+#     else:
+#        #odd=number+odd
+#        odd+=number
+
+# print(even)
+# print(odd)
+
+# 13.Find Missing Number
 # If you have a list of numbers from 1 to n but one number is missing, find the missing number.
 
+# n=int(input("Enter Range:"))
+# lst=list(range(1,n+1))
+# missing=list(map(int,input("Enter n with one missing").split()))
+# print(lst)
 
+# for number in lst:
+#     if number not in missing:
+#         print(number)
 
-# 13. Rotate a List
+#OR
+
+n=int(input("Enter Range:"))
+missing=list(map(int,input("Enter n with one missing").split()))
+
+original_sum=n*(n+1)//2
+missing_sum=sum(missing)
+
+final_sum=original_sum-missing_sum
+
+print(final_sum)
+
+# 14.Rotate a List
 # Rotate the elements of a list left by 1 position (e.g. [1,2,3,4] → [2,3,4,1]).
 
 # n=list(map(int,input("Enter Value1:").split(" ")))
@@ -291,7 +385,7 @@
 # # print(counted+[n[0]])
 
 
-# 14. Find Common Elements
+# 15.Find Common Elements
 # Given two lists, find elements that are present in both.
 
 
